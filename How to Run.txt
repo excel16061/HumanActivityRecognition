@@ -1,0 +1,5 @@
+run mainRun.py
+==============
+python mainRun.py --input <Input Video File>
+python mainRun.py --input example_activities.mp4
+python mainRun.py --input test1.mp4
