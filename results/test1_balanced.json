@@ -1,0 +1,1521 @@
+{
+  "input": "test1.mp4",
+  "mode": "balanced",
+  "model": "resnet-34_kinetics.onnx",
+  "threads": 10,
+  "fps": 30.0,
+  "frames_read": 18075,
+  "clips_processed": 301,
+  "wall_time_seconds": 42.132,
+  "total_model_inference_seconds": 29.675,
+  "median_inference_ms": 97.569,
+  "mean_inference_ms": 98.587,
+  "clips": [
+    {
+      "start_seconds": 0.0,
+      "label": "stretching arm",
+      "inference_ms": 279.17
+    },
+    {
+      "start_seconds": 2.0,
+      "label": "doing nails",
+      "inference_ms": 104.43
+    },
+    {
+      "start_seconds": 4.0,
+      "label": "writing",
+      "inference_ms": 94.18
+    },
+    {
+      "start_seconds": 6.0,
+      "label": "high jump",
+      "inference_ms": 97.69
+    },
+    {
+      "start_seconds": 8.0,
+      "label": "javelin throw",
+      "inference_ms": 99.61
+    },
+    {
+      "start_seconds": 10.0,
+      "label": "skateboarding",
+      "inference_ms": 102.67
+    },
+    {
+      "start_seconds": 12.0,
+      "label": "playing bagpipes",
+      "inference_ms": 104.09
+    },
+    {
+      "start_seconds": 14.0,
+      "label": "pushing wheelchair",
+      "inference_ms": 103.0
+    },
+    {
+      "start_seconds": 16.0,
+      "label": "feeding goats",
+      "inference_ms": 103.42
+    },
+    {
+      "start_seconds": 18.0,
+      "label": "situp",
+      "inference_ms": 95.65
+    },
+    {
+      "start_seconds": 20.0,
+      "label": "building cabinet",
+      "inference_ms": 93.59
+    },
+    {
+      "start_seconds": 22.0,
+      "label": "moving furniture",
+      "inference_ms": 93.33
+    },
+    {
+      "start_seconds": 24.0,
+      "label": "playing organ",
+      "inference_ms": 93.25
+    },
+    {
+      "start_seconds": 26.0,
+      "label": "playing organ",
+      "inference_ms": 95.09
+    },
+    {
+      "start_seconds": 28.0,
+      "label": "building shed",
+      "inference_ms": 97.49
+    },
+    {
+      "start_seconds": 30.0,
+      "label": "riding mountain bike",
+      "inference_ms": 97.7
+    },
+    {
+      "start_seconds": 32.0,
+      "label": "bungee jumping",
+      "inference_ms": 93.17
+    },
+    {
+      "start_seconds": 34.0,
+      "label": "motorcycling",
+      "inference_ms": 96.54
+    },
+    {
+      "start_seconds": 36.0,
+      "label": "motorcycling",
+      "inference_ms": 94.77
+    },
+    {
+      "start_seconds": 38.0,
+      "label": "motorcycling",
+      "inference_ms": 92.87
+    },
+    {
+      "start_seconds": 40.0,
+      "label": "faceplanting",
+      "inference_ms": 94.34
+    },
+    {
+      "start_seconds": 42.0,
+      "label": "skateboarding",
+      "inference_ms": 93.68
+    },
+    {
+      "start_seconds": 44.0,
+      "label": "slacklining",
+      "inference_ms": 96.37
+    },
+    {
+      "start_seconds": 46.0,
+      "label": "cartwheeling",
+      "inference_ms": 94.89
+    },
+    {
+      "start_seconds": 48.0,
+      "label": "parkour",
+      "inference_ms": 91.13
+    },
+    {
+      "start_seconds": 50.0,
+      "label": "cartwheeling",
+      "inference_ms": 91.94
+    },
+    {
+      "start_seconds": 52.0,
+      "label": "dunking basketball",
+      "inference_ms": 92.78
+    },
+    {
+      "start_seconds": 54.0,
+      "label": "cleaning pool",
+      "inference_ms": 92.37
+    },
+    {
+      "start_seconds": 56.0,
+      "label": "playing tennis",
+      "inference_ms": 89.89
+    },
+    {
+      "start_seconds": 58.0,
+      "label": "playing tennis",
+      "inference_ms": 95.53
+    },
+    {
+      "start_seconds": 60.0,
+      "label": "riding unicycle",
+      "inference_ms": 94.52
+    },
+    {
+      "start_seconds": 62.0,
+      "label": "dancing gangnam style",
+      "inference_ms": 93.06
+    },
+    {
+      "start_seconds": 64.0,
+      "label": "punching bag",
+      "inference_ms": 93.46
+    },
+    {
+      "start_seconds": 66.0,
+      "label": "punching bag",
+      "inference_ms": 94.54
+    },
+    {
+      "start_seconds": 68.0,
+      "label": "trapezing",
+      "inference_ms": 92.54
+    },
+    {
+      "start_seconds": 70.0,
+      "label": "trapezing",
+      "inference_ms": 94.53
+    },
+    {
+      "start_seconds": 72.0,
+      "label": "diving cliff",
+      "inference_ms": 93.31
+    },
+    {
+      "start_seconds": 74.0,
+      "label": "swimming butterfly stroke",
+      "inference_ms": 91.21
+    },
+    {
+      "start_seconds": 76.0,
+      "label": "jetskiing",
+      "inference_ms": 94.68
+    },
+    {
+      "start_seconds": 78.0,
+      "label": "riding a bike",
+      "inference_ms": 93.05
+    },
+    {
+      "start_seconds": 80.0,
+      "label": "motorcycling",
+      "inference_ms": 92.13
+    },
+    {
+      "start_seconds": 82.0,
+      "label": "shining shoes",
+      "inference_ms": 92.61
+    },
+    {
+      "start_seconds": 84.0,
+      "label": "getting a haircut",
+      "inference_ms": 92.78
+    },
+    {
+      "start_seconds": 86.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 92.34
+    },
+    {
+      "start_seconds": 88.0,
+      "label": "slacklining",
+      "inference_ms": 90.92
+    },
+    {
+      "start_seconds": 90.0,
+      "label": "yoga",
+      "inference_ms": 92.19
+    },
+    {
+      "start_seconds": 92.0,
+      "label": "paragliding",
+      "inference_ms": 89.91
+    },
+    {
+      "start_seconds": 94.0,
+      "label": "archery",
+      "inference_ms": 91.57
+    },
+    {
+      "start_seconds": 96.0,
+      "label": "playing guitar",
+      "inference_ms": 91.98
+    },
+    {
+      "start_seconds": 98.0,
+      "label": "archery",
+      "inference_ms": 91.58
+    },
+    {
+      "start_seconds": 100.0,
+      "label": "skateboarding",
+      "inference_ms": 94.05
+    },
+    {
+      "start_seconds": 102.0,
+      "label": "skateboarding",
+      "inference_ms": 92.83
+    },
+    {
+      "start_seconds": 104.0,
+      "label": "skateboarding",
+      "inference_ms": 97.95
+    },
+    {
+      "start_seconds": 106.0,
+      "label": "passing American football (not in game)",
+      "inference_ms": 97.97
+    },
+    {
+      "start_seconds": 108.0,
+      "label": "faceplanting",
+      "inference_ms": 92.9
+    },
+    {
+      "start_seconds": 110.0,
+      "label": "situp",
+      "inference_ms": 93.32
+    },
+    {
+      "start_seconds": 112.0,
+      "label": "making bed",
+      "inference_ms": 96.06
+    },
+    {
+      "start_seconds": 114.0,
+      "label": "ice skating",
+      "inference_ms": 91.68
+    },
+    {
+      "start_seconds": 116.0,
+      "label": "skateboarding",
+      "inference_ms": 93.44
+    },
+    {
+      "start_seconds": 118.0,
+      "label": "bouncing on trampoline",
+      "inference_ms": 93.95
+    },
+    {
+      "start_seconds": 120.0,
+      "label": "driving car",
+      "inference_ms": 92.51
+    },
+    {
+      "start_seconds": 122.0,
+      "label": "situp",
+      "inference_ms": 96.02
+    },
+    {
+      "start_seconds": 124.0,
+      "label": "dancing ballet",
+      "inference_ms": 91.02
+    },
+    {
+      "start_seconds": 126.0,
+      "label": "riding unicycle",
+      "inference_ms": 91.1
+    },
+    {
+      "start_seconds": 128.0,
+      "label": "motorcycling",
+      "inference_ms": 91.89
+    },
+    {
+      "start_seconds": 130.0,
+      "label": "motorcycling",
+      "inference_ms": 93.22
+    },
+    {
+      "start_seconds": 132.0,
+      "label": "diving cliff",
+      "inference_ms": 95.82
+    },
+    {
+      "start_seconds": 134.0,
+      "label": "diving cliff",
+      "inference_ms": 99.58
+    },
+    {
+      "start_seconds": 136.0,
+      "label": "abseiling",
+      "inference_ms": 104.11
+    },
+    {
+      "start_seconds": 138.0,
+      "label": "archery",
+      "inference_ms": 99.39
+    },
+    {
+      "start_seconds": 140.0,
+      "label": "javelin throw",
+      "inference_ms": 102.06
+    },
+    {
+      "start_seconds": 142.0,
+      "label": "riding or walking with horse",
+      "inference_ms": 99.65
+    },
+    {
+      "start_seconds": 144.0,
+      "label": "squat",
+      "inference_ms": 101.36
+    },
+    {
+      "start_seconds": 146.0,
+      "label": "squat",
+      "inference_ms": 101.18
+    },
+    {
+      "start_seconds": 148.0,
+      "label": "skateboarding",
+      "inference_ms": 101.98
+    },
+    {
+      "start_seconds": 150.0,
+      "label": "parkour",
+      "inference_ms": 104.01
+    },
+    {
+      "start_seconds": 152.0,
+      "label": "skateboarding",
+      "inference_ms": 101.74
+    },
+    {
+      "start_seconds": 154.0,
+      "label": "skateboarding",
+      "inference_ms": 101.84
+    },
+    {
+      "start_seconds": 156.0,
+      "label": "cleaning gutters",
+      "inference_ms": 98.68
+    },
+    {
+      "start_seconds": 158.0,
+      "label": "archery",
+      "inference_ms": 101.37
+    },
+    {
+      "start_seconds": 160.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 100.21
+    },
+    {
+      "start_seconds": 162.0,
+      "label": "yoga",
+      "inference_ms": 100.66
+    },
+    {
+      "start_seconds": 164.0,
+      "label": "push up",
+      "inference_ms": 102.43
+    },
+    {
+      "start_seconds": 166.0,
+      "label": "motorcycling",
+      "inference_ms": 97.9
+    },
+    {
+      "start_seconds": 168.0,
+      "label": "motorcycling",
+      "inference_ms": 99.7
+    },
+    {
+      "start_seconds": 170.0,
+      "label": "motorcycling",
+      "inference_ms": 99.02
+    },
+    {
+      "start_seconds": 172.0,
+      "label": "parkour",
+      "inference_ms": 98.92
+    },
+    {
+      "start_seconds": 174.0,
+      "label": "parkour",
+      "inference_ms": 99.56
+    },
+    {
+      "start_seconds": 176.0,
+      "label": "cleaning gutters",
+      "inference_ms": 98.93
+    },
+    {
+      "start_seconds": 178.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 100.54
+    },
+    {
+      "start_seconds": 180.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 100.83
+    },
+    {
+      "start_seconds": 182.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 99.53
+    },
+    {
+      "start_seconds": 184.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 98.0
+    },
+    {
+      "start_seconds": 186.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 100.49
+    },
+    {
+      "start_seconds": 188.0,
+      "label": "playing tennis",
+      "inference_ms": 100.36
+    },
+    {
+      "start_seconds": 190.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 102.72
+    },
+    {
+      "start_seconds": 192.0,
+      "label": "playing badminton",
+      "inference_ms": 99.75
+    },
+    {
+      "start_seconds": 194.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 99.39
+    },
+    {
+      "start_seconds": 196.0,
+      "label": "motorcycling",
+      "inference_ms": 102.58
+    },
+    {
+      "start_seconds": 198.0,
+      "label": "motorcycling",
+      "inference_ms": 97.72
+    },
+    {
+      "start_seconds": 200.0,
+      "label": "motorcycling",
+      "inference_ms": 99.93
+    },
+    {
+      "start_seconds": 202.0,
+      "label": "parkour",
+      "inference_ms": 100.34
+    },
+    {
+      "start_seconds": 204.0,
+      "label": "somersaulting",
+      "inference_ms": 92.77
+    },
+    {
+      "start_seconds": 206.0,
+      "label": "somersaulting",
+      "inference_ms": 100.49
+    },
+    {
+      "start_seconds": 208.0,
+      "label": "pole vault",
+      "inference_ms": 93.1
+    },
+    {
+      "start_seconds": 210.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 90.91
+    },
+    {
+      "start_seconds": 212.0,
+      "label": "pole vault",
+      "inference_ms": 94.45
+    },
+    {
+      "start_seconds": 214.0,
+      "label": "riding a bike",
+      "inference_ms": 93.87
+    },
+    {
+      "start_seconds": 216.0,
+      "label": "riding unicycle",
+      "inference_ms": 96.06
+    },
+    {
+      "start_seconds": 218.0,
+      "label": "jumping into pool",
+      "inference_ms": 93.59
+    },
+    {
+      "start_seconds": 220.0,
+      "label": "jumping into pool",
+      "inference_ms": 94.22
+    },
+    {
+      "start_seconds": 222.0,
+      "label": "slacklining",
+      "inference_ms": 92.78
+    },
+    {
+      "start_seconds": 224.0,
+      "label": "playing tennis",
+      "inference_ms": 90.59
+    },
+    {
+      "start_seconds": 226.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 92.39
+    },
+    {
+      "start_seconds": 228.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 90.38
+    },
+    {
+      "start_seconds": 230.0,
+      "label": "playing tennis",
+      "inference_ms": 93.19
+    },
+    {
+      "start_seconds": 232.0,
+      "label": "welding",
+      "inference_ms": 92.25
+    },
+    {
+      "start_seconds": 234.0,
+      "label": "high jump",
+      "inference_ms": 93.46
+    },
+    {
+      "start_seconds": 236.0,
+      "label": "playing didgeridoo",
+      "inference_ms": 93.51
+    },
+    {
+      "start_seconds": 238.0,
+      "label": "skateboarding",
+      "inference_ms": 90.09
+    },
+    {
+      "start_seconds": 240.0,
+      "label": "tying knot (not on a tie)",
+      "inference_ms": 92.61
+    },
+    {
+      "start_seconds": 242.0,
+      "label": "news anchoring",
+      "inference_ms": 92.52
+    },
+    {
+      "start_seconds": 244.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 92.61
+    },
+    {
+      "start_seconds": 246.0,
+      "label": "playing tennis",
+      "inference_ms": 91.53
+    },
+    {
+      "start_seconds": 248.0,
+      "label": "playing tennis",
+      "inference_ms": 92.52
+    },
+    {
+      "start_seconds": 250.0,
+      "label": "shooting basketball",
+      "inference_ms": 92.23
+    },
+    {
+      "start_seconds": 252.0,
+      "label": "barbequing",
+      "inference_ms": 94.17
+    },
+    {
+      "start_seconds": 254.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 95.5
+    },
+    {
+      "start_seconds": 256.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 95.64
+    },
+    {
+      "start_seconds": 258.0,
+      "label": "cheerleading",
+      "inference_ms": 92.2
+    },
+    {
+      "start_seconds": 260.0,
+      "label": "cheerleading",
+      "inference_ms": 91.52
+    },
+    {
+      "start_seconds": 262.0,
+      "label": "windsurfing",
+      "inference_ms": 92.66
+    },
+    {
+      "start_seconds": 264.0,
+      "label": "high jump",
+      "inference_ms": 95.68
+    },
+    {
+      "start_seconds": 266.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 98.11
+    },
+    {
+      "start_seconds": 268.0,
+      "label": "driving car",
+      "inference_ms": 95.71
+    },
+    {
+      "start_seconds": 270.0,
+      "label": "parkour",
+      "inference_ms": 92.65
+    },
+    {
+      "start_seconds": 272.0,
+      "label": "pushing car",
+      "inference_ms": 91.31
+    },
+    {
+      "start_seconds": 274.0,
+      "label": "parkour",
+      "inference_ms": 91.29
+    },
+    {
+      "start_seconds": 276.0,
+      "label": "bouncing on trampoline",
+      "inference_ms": 94.57
+    },
+    {
+      "start_seconds": 278.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 90.77
+    },
+    {
+      "start_seconds": 280.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 93.84
+    },
+    {
+      "start_seconds": 282.0,
+      "label": "somersaulting",
+      "inference_ms": 97.33
+    },
+    {
+      "start_seconds": 284.0,
+      "label": "high jump",
+      "inference_ms": 95.13
+    },
+    {
+      "start_seconds": 286.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 95.05
+    },
+    {
+      "start_seconds": 288.0,
+      "label": "sailing",
+      "inference_ms": 92.35
+    },
+    {
+      "start_seconds": 290.0,
+      "label": "skateboarding",
+      "inference_ms": 94.35
+    },
+    {
+      "start_seconds": 292.0,
+      "label": "punching bag",
+      "inference_ms": 94.77
+    },
+    {
+      "start_seconds": 294.0,
+      "label": "sailing",
+      "inference_ms": 92.33
+    },
+    {
+      "start_seconds": 296.0,
+      "label": "weaving basket",
+      "inference_ms": 93.66
+    },
+    {
+      "start_seconds": 298.0,
+      "label": "paragliding",
+      "inference_ms": 90.19
+    },
+    {
+      "start_seconds": 300.0,
+      "label": "motorcycling",
+      "inference_ms": 91.49
+    },
+    {
+      "start_seconds": 302.0,
+      "label": "skateboarding",
+      "inference_ms": 92.39
+    },
+    {
+      "start_seconds": 304.0,
+      "label": "skateboarding",
+      "inference_ms": 91.61
+    },
+    {
+      "start_seconds": 306.0,
+      "label": "dancing charleston",
+      "inference_ms": 93.56
+    },
+    {
+      "start_seconds": 308.0,
+      "label": "exercising arm",
+      "inference_ms": 96.06
+    },
+    {
+      "start_seconds": 310.0,
+      "label": "exercising arm",
+      "inference_ms": 96.9
+    },
+    {
+      "start_seconds": 312.0,
+      "label": "stretching leg",
+      "inference_ms": 133.01
+    },
+    {
+      "start_seconds": 314.0,
+      "label": "parasailing",
+      "inference_ms": 100.59
+    },
+    {
+      "start_seconds": 316.0,
+      "label": "parasailing",
+      "inference_ms": 102.27
+    },
+    {
+      "start_seconds": 318.0,
+      "label": "riding mechanical bull",
+      "inference_ms": 99.8
+    },
+    {
+      "start_seconds": 320.0,
+      "label": "surfing water",
+      "inference_ms": 105.72
+    },
+    {
+      "start_seconds": 322.0,
+      "label": "snowboarding",
+      "inference_ms": 97.22
+    },
+    {
+      "start_seconds": 324.0,
+      "label": "abseiling",
+      "inference_ms": 99.75
+    },
+    {
+      "start_seconds": 326.0,
+      "label": "trimming trees",
+      "inference_ms": 94.46
+    },
+    {
+      "start_seconds": 328.0,
+      "label": "scuba diving",
+      "inference_ms": 95.48
+    },
+    {
+      "start_seconds": 330.0,
+      "label": "riding unicycle",
+      "inference_ms": 94.68
+    },
+    {
+      "start_seconds": 332.0,
+      "label": "riding unicycle",
+      "inference_ms": 93.54
+    },
+    {
+      "start_seconds": 334.0,
+      "label": "riding a bike",
+      "inference_ms": 94.35
+    },
+    {
+      "start_seconds": 336.0,
+      "label": "skateboarding",
+      "inference_ms": 97.57
+    },
+    {
+      "start_seconds": 338.0,
+      "label": "ice fishing",
+      "inference_ms": 98.7
+    },
+    {
+      "start_seconds": 340.0,
+      "label": "skydiving",
+      "inference_ms": 99.47
+    },
+    {
+      "start_seconds": 342.0,
+      "label": "snowkiting",
+      "inference_ms": 96.06
+    },
+    {
+      "start_seconds": 344.0,
+      "label": "yoga",
+      "inference_ms": 95.59
+    },
+    {
+      "start_seconds": 346.0,
+      "label": "yoga",
+      "inference_ms": 91.83
+    },
+    {
+      "start_seconds": 348.0,
+      "label": "eating watermelon",
+      "inference_ms": 92.26
+    },
+    {
+      "start_seconds": 350.0,
+      "label": "balloon blowing",
+      "inference_ms": 93.39
+    },
+    {
+      "start_seconds": 352.0,
+      "label": "balloon blowing",
+      "inference_ms": 92.95
+    },
+    {
+      "start_seconds": 354.0,
+      "label": "riding mountain bike",
+      "inference_ms": 97.12
+    },
+    {
+      "start_seconds": 356.0,
+      "label": "crossing river",
+      "inference_ms": 103.26
+    },
+    {
+      "start_seconds": 358.0,
+      "label": "paragliding",
+      "inference_ms": 91.91
+    },
+    {
+      "start_seconds": 360.0,
+      "label": "riding mountain bike",
+      "inference_ms": 94.89
+    },
+    {
+      "start_seconds": 362.0,
+      "label": "riding mountain bike",
+      "inference_ms": 94.46
+    },
+    {
+      "start_seconds": 364.0,
+      "label": "skateboarding",
+      "inference_ms": 92.87
+    },
+    {
+      "start_seconds": 366.0,
+      "label": "skateboarding",
+      "inference_ms": 92.43
+    },
+    {
+      "start_seconds": 368.0,
+      "label": "skateboarding",
+      "inference_ms": 92.29
+    },
+    {
+      "start_seconds": 370.0,
+      "label": "motorcycling",
+      "inference_ms": 93.21
+    },
+    {
+      "start_seconds": 372.0,
+      "label": "snowkiting",
+      "inference_ms": 95.33
+    },
+    {
+      "start_seconds": 374.0,
+      "label": "kitesurfing",
+      "inference_ms": 93.34
+    },
+    {
+      "start_seconds": 376.0,
+      "label": "paragliding",
+      "inference_ms": 91.2
+    },
+    {
+      "start_seconds": 378.0,
+      "label": "juggling balls",
+      "inference_ms": 89.53
+    },
+    {
+      "start_seconds": 380.0,
+      "label": "tap dancing",
+      "inference_ms": 91.61
+    },
+    {
+      "start_seconds": 382.0,
+      "label": "motorcycling",
+      "inference_ms": 91.08
+    },
+    {
+      "start_seconds": 384.0,
+      "label": "motorcycling",
+      "inference_ms": 94.59
+    },
+    {
+      "start_seconds": 386.0,
+      "label": "motorcycling",
+      "inference_ms": 91.82
+    },
+    {
+      "start_seconds": 388.0,
+      "label": "motorcycling",
+      "inference_ms": 93.39
+    },
+    {
+      "start_seconds": 390.0,
+      "label": "slacklining",
+      "inference_ms": 94.31
+    },
+    {
+      "start_seconds": 392.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 91.04
+    },
+    {
+      "start_seconds": 394.0,
+      "label": "playing chess",
+      "inference_ms": 95.23
+    },
+    {
+      "start_seconds": 396.0,
+      "label": "playing chess",
+      "inference_ms": 95.28
+    },
+    {
+      "start_seconds": 398.0,
+      "label": "skateboarding",
+      "inference_ms": 91.5
+    },
+    {
+      "start_seconds": 400.0,
+      "label": "skateboarding",
+      "inference_ms": 106.04
+    },
+    {
+      "start_seconds": 402.0,
+      "label": "riding a bike",
+      "inference_ms": 101.93
+    },
+    {
+      "start_seconds": 404.0,
+      "label": "motorcycling",
+      "inference_ms": 99.27
+    },
+    {
+      "start_seconds": 406.0,
+      "label": "riding unicycle",
+      "inference_ms": 99.98
+    },
+    {
+      "start_seconds": 408.0,
+      "label": "flying kite",
+      "inference_ms": 99.77
+    },
+    {
+      "start_seconds": 410.0,
+      "label": "slacklining",
+      "inference_ms": 99.08
+    },
+    {
+      "start_seconds": 412.0,
+      "label": "parkour",
+      "inference_ms": 102.33
+    },
+    {
+      "start_seconds": 414.0,
+      "label": "playing paintball",
+      "inference_ms": 106.59
+    },
+    {
+      "start_seconds": 416.0,
+      "label": "parkour",
+      "inference_ms": 100.52
+    },
+    {
+      "start_seconds": 418.0,
+      "label": "walking the dog",
+      "inference_ms": 99.94
+    },
+    {
+      "start_seconds": 420.0,
+      "label": "playing paintball",
+      "inference_ms": 102.34
+    },
+    {
+      "start_seconds": 422.0,
+      "label": "archery",
+      "inference_ms": 101.17
+    },
+    {
+      "start_seconds": 424.0,
+      "label": "riding camel",
+      "inference_ms": 105.17
+    },
+    {
+      "start_seconds": 426.0,
+      "label": "marching",
+      "inference_ms": 101.69
+    },
+    {
+      "start_seconds": 428.0,
+      "label": "pull ups",
+      "inference_ms": 98.61
+    },
+    {
+      "start_seconds": 430.0,
+      "label": "front raises",
+      "inference_ms": 101.94
+    },
+    {
+      "start_seconds": 432.0,
+      "label": "marching",
+      "inference_ms": 99.13
+    },
+    {
+      "start_seconds": 434.0,
+      "label": "long jump",
+      "inference_ms": 101.8
+    },
+    {
+      "start_seconds": 436.0,
+      "label": "swinging on something",
+      "inference_ms": 101.3
+    },
+    {
+      "start_seconds": 438.0,
+      "label": "playing badminton",
+      "inference_ms": 102.78
+    },
+    {
+      "start_seconds": 440.0,
+      "label": "springboard diving",
+      "inference_ms": 102.18
+    },
+    {
+      "start_seconds": 442.0,
+      "label": "somersaulting",
+      "inference_ms": 100.34
+    },
+    {
+      "start_seconds": 444.0,
+      "label": "skateboarding",
+      "inference_ms": 99.37
+    },
+    {
+      "start_seconds": 446.0,
+      "label": "riding unicycle",
+      "inference_ms": 101.52
+    },
+    {
+      "start_seconds": 448.0,
+      "label": "riding unicycle",
+      "inference_ms": 103.07
+    },
+    {
+      "start_seconds": 450.0,
+      "label": "skiing crosscountry",
+      "inference_ms": 101.08
+    },
+    {
+      "start_seconds": 452.0,
+      "label": "chopping wood",
+      "inference_ms": 98.25
+    },
+    {
+      "start_seconds": 454.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 100.61
+    },
+    {
+      "start_seconds": 456.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 101.67
+    },
+    {
+      "start_seconds": 458.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 102.18
+    },
+    {
+      "start_seconds": 460.0,
+      "label": "cleaning pool",
+      "inference_ms": 100.35
+    },
+    {
+      "start_seconds": 462.0,
+      "label": "hula hooping",
+      "inference_ms": 142.95
+    },
+    {
+      "start_seconds": 464.0,
+      "label": "hula hooping",
+      "inference_ms": 185.85
+    },
+    {
+      "start_seconds": 466.0,
+      "label": "spray painting",
+      "inference_ms": 133.45
+    },
+    {
+      "start_seconds": 468.0,
+      "label": "hula hooping",
+      "inference_ms": 105.25
+    },
+    {
+      "start_seconds": 470.0,
+      "label": "hula hooping",
+      "inference_ms": 97.35
+    },
+    {
+      "start_seconds": 472.0,
+      "label": "hula hooping",
+      "inference_ms": 100.45
+    },
+    {
+      "start_seconds": 474.0,
+      "label": "hula hooping",
+      "inference_ms": 103.35
+    },
+    {
+      "start_seconds": 476.0,
+      "label": "riding mountain bike",
+      "inference_ms": 98.05
+    },
+    {
+      "start_seconds": 478.0,
+      "label": "skateboarding",
+      "inference_ms": 97.54
+    },
+    {
+      "start_seconds": 480.0,
+      "label": "diving cliff",
+      "inference_ms": 99.65
+    },
+    {
+      "start_seconds": 482.0,
+      "label": "snowboarding",
+      "inference_ms": 95.29
+    },
+    {
+      "start_seconds": 484.0,
+      "label": "contact juggling",
+      "inference_ms": 94.69
+    },
+    {
+      "start_seconds": 486.0,
+      "label": "snowboarding",
+      "inference_ms": 94.63
+    },
+    {
+      "start_seconds": 488.0,
+      "label": "snowboarding",
+      "inference_ms": 94.33
+    },
+    {
+      "start_seconds": 490.0,
+      "label": "snowboarding",
+      "inference_ms": 101.53
+    },
+    {
+      "start_seconds": 492.0,
+      "label": "snowboarding",
+      "inference_ms": 91.91
+    },
+    {
+      "start_seconds": 494.0,
+      "label": "catching or throwing frisbee",
+      "inference_ms": 97.33
+    },
+    {
+      "start_seconds": 496.0,
+      "label": "bungee jumping",
+      "inference_ms": 97.66
+    },
+    {
+      "start_seconds": 498.0,
+      "label": "snowboarding",
+      "inference_ms": 106.04
+    },
+    {
+      "start_seconds": 500.0,
+      "label": "presenting weather forecast",
+      "inference_ms": 105.63
+    },
+    {
+      "start_seconds": 502.0,
+      "label": "snowboarding",
+      "inference_ms": 100.96
+    },
+    {
+      "start_seconds": 504.0,
+      "label": "flying kite",
+      "inference_ms": 103.01
+    },
+    {
+      "start_seconds": 506.0,
+      "label": "snowkiting",
+      "inference_ms": 101.33
+    },
+    {
+      "start_seconds": 508.0,
+      "label": "trapezing",
+      "inference_ms": 103.43
+    },
+    {
+      "start_seconds": 510.0,
+      "label": "dancing ballet",
+      "inference_ms": 107.75
+    },
+    {
+      "start_seconds": 512.0,
+      "label": "playing saxophone",
+      "inference_ms": 102.22
+    },
+    {
+      "start_seconds": 514.0,
+      "label": "skateboarding",
+      "inference_ms": 101.1
+    },
+    {
+      "start_seconds": 516.0,
+      "label": "snowboarding",
+      "inference_ms": 100.18
+    },
+    {
+      "start_seconds": 518.0,
+      "label": "rock climbing",
+      "inference_ms": 100.53
+    },
+    {
+      "start_seconds": 520.0,
+      "label": "water sliding",
+      "inference_ms": 106.21
+    },
+    {
+      "start_seconds": 522.0,
+      "label": "jumping into pool",
+      "inference_ms": 100.98
+    },
+    {
+      "start_seconds": 524.0,
+      "label": "mowing lawn",
+      "inference_ms": 99.27
+    },
+    {
+      "start_seconds": 526.0,
+      "label": "feeding fish",
+      "inference_ms": 102.91
+    },
+    {
+      "start_seconds": 528.0,
+      "label": "stomping grapes",
+      "inference_ms": 101.41
+    },
+    {
+      "start_seconds": 530.0,
+      "label": "kicking field goal",
+      "inference_ms": 101.74
+    },
+    {
+      "start_seconds": 532.0,
+      "label": "climbing ladder",
+      "inference_ms": 100.0
+    },
+    {
+      "start_seconds": 534.0,
+      "label": "surfing water",
+      "inference_ms": 102.05
+    },
+    {
+      "start_seconds": 536.0,
+      "label": "ice skating",
+      "inference_ms": 106.17
+    },
+    {
+      "start_seconds": 538.0,
+      "label": "slacklining",
+      "inference_ms": 103.49
+    },
+    {
+      "start_seconds": 540.0,
+      "label": "slacklining",
+      "inference_ms": 101.03
+    },
+    {
+      "start_seconds": 542.0,
+      "label": "slacklining",
+      "inference_ms": 101.05
+    },
+    {
+      "start_seconds": 544.0,
+      "label": "slacklining",
+      "inference_ms": 103.83
+    },
+    {
+      "start_seconds": 546.0,
+      "label": "spinning poi",
+      "inference_ms": 101.07
+    },
+    {
+      "start_seconds": 548.0,
+      "label": "barbequing",
+      "inference_ms": 97.89
+    },
+    {
+      "start_seconds": 550.0,
+      "label": "belly dancing",
+      "inference_ms": 101.44
+    },
+    {
+      "start_seconds": 552.0,
+      "label": "drop kicking",
+      "inference_ms": 100.4
+    },
+    {
+      "start_seconds": 554.0,
+      "label": "breakdancing",
+      "inference_ms": 101.42
+    },
+    {
+      "start_seconds": 556.0,
+      "label": "somersaulting",
+      "inference_ms": 99.62
+    },
+    {
+      "start_seconds": 558.0,
+      "label": "throwing axe",
+      "inference_ms": 104.7
+    },
+    {
+      "start_seconds": 560.0,
+      "label": "snorkeling",
+      "inference_ms": 104.3
+    },
+    {
+      "start_seconds": 562.0,
+      "label": "snowkiting",
+      "inference_ms": 100.54
+    },
+    {
+      "start_seconds": 564.0,
+      "label": "diving cliff",
+      "inference_ms": 101.66
+    },
+    {
+      "start_seconds": 566.0,
+      "label": "jetskiing",
+      "inference_ms": 102.46
+    },
+    {
+      "start_seconds": 568.0,
+      "label": "diving cliff",
+      "inference_ms": 102.79
+    },
+    {
+      "start_seconds": 570.0,
+      "label": "diving cliff",
+      "inference_ms": 99.47
+    },
+    {
+      "start_seconds": 572.0,
+      "label": "spinning poi",
+      "inference_ms": 99.91
+    },
+    {
+      "start_seconds": 574.0,
+      "label": "springboard diving",
+      "inference_ms": 99.67
+    },
+    {
+      "start_seconds": 576.0,
+      "label": "parkour",
+      "inference_ms": 101.66
+    },
+    {
+      "start_seconds": 578.0,
+      "label": "springboard diving",
+      "inference_ms": 100.07
+    },
+    {
+      "start_seconds": 580.0,
+      "label": "parkour",
+      "inference_ms": 100.12
+    },
+    {
+      "start_seconds": 582.0,
+      "label": "slacklining",
+      "inference_ms": 101.2
+    },
+    {
+      "start_seconds": 584.0,
+      "label": "yoga",
+      "inference_ms": 100.69
+    },
+    {
+      "start_seconds": 586.0,
+      "label": "playing tennis",
+      "inference_ms": 104.05
+    },
+    {
+      "start_seconds": 588.0,
+      "label": "playing basketball",
+      "inference_ms": 102.32
+    },
+    {
+      "start_seconds": 590.0,
+      "label": "gymnastics tumbling",
+      "inference_ms": 99.87
+    },
+    {
+      "start_seconds": 592.0,
+      "label": "playing tennis",
+      "inference_ms": 106.68
+    },
+    {
+      "start_seconds": 594.0,
+      "label": "spinning poi",
+      "inference_ms": 101.84
+    },
+    {
+      "start_seconds": 596.0,
+      "label": "motorcycling",
+      "inference_ms": 102.37
+    },
+    {
+      "start_seconds": 598.0,
+      "label": "snowkiting",
+      "inference_ms": 103.61
+    },
+    {
+      "start_seconds": 600.0,
+      "label": "kitesurfing",
+      "inference_ms": 102.34
+    }
+  ],
+  "notes": "Predictions are not validated accuracy; sparse modes may miss brief actions. Inference time excludes decoding and preprocessing."
+}
