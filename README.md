@@ -1,71 +1,69 @@
 # HumanActivityRecognition
 
-Extracts frames from a video, classifies one of them with a pretrained image model, runs human activity recognition on the video, and generates a report.
+Video activity recognition using the ResNet-34 Kinetics ONNX model through OpenCV DNN.
 
-## Requirements
+## Setup
 
-Python 3.12 is required for TensorFlow. Python 3.15 is too new for TensorFlow to install.
-
-| Package | Import name | Used by |
-| --- | --- | --- |
-| opencv-python | cv2 | mainRun.py (frame capture) |
-| numpy | numpy | OpenCV dependency |
-| tensorflow | tensorflow | classify_image.py (Keras) |
-| imutils | imutils | human_activity_reco.py |
-| scikit-learn | sklearn | Reportgenearation.py |
-| pillow | PIL | Keras image loading in classify_image.py |
-| seaborn | seaborn | Reportgenearation.py |
-
-Install into a Python 3.12 virtual environment:
+From the project folder:
 
 ```bash
-python3.12 -m venv .venv312
-source .venv312/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install tensorflow imutils scikit-learn opencv-python numpy pillow seaborn
+python -m pip install -r requirements.txt
 ```
 
-To record exact versions:
+The video pipeline needs OpenCV and NumPy. TensorFlow is not required.
 
-```bash
-python -m pip freeze > requirements.txt
-```
+## Model
 
-## Model files
+| Setting | Value |
+| --- | --- |
+| Model file | `resnet-34_kinetics.onnx` |
+| Labels | `action_recognition_kinetics.txt` |
+| Inference engine | OpenCV DNN |
+| Clip length | 16 consecutive frames |
+| Spatial input | 112 × 112 pixels |
+| Tensor layout | N × C × T × H × W (1 × 3 × 16 × 112 × 112) |
+| Preprocessing | Scale 1.0, mean (114.7748, 107.7354, 99.4750), swapRB=True, crop=True |
 
-The following must be in the project folder:
+Place the ONNX file and matching labels in the project folder. The launcher uses these names by default. Model weights are separate from Python packages; installing requirements does not download them. The filename identifies the intended model; the code checks that its output count matches the labels, but does not verify checkpoint provenance.
 
-- `resnet-34_kinetics.onnx`
-- `action_recognition_kinetics.txt`
-
-## Usage
-
-Run with a video file. A still image will not work with `human_activity_reco.py`.
+## Run
 
 ```bash
 python mainRun.py --input test1.mp4
 ```
 
-`mainRun.py` does the following:
+The video script also works directly with the same defaults:
 
-1. Clears the `frames` folder from the previous run.
-2. Saves up to 26 frames from the video to `frames/`.
-3. Runs `classify_image.py` on one randomly chosen saved frame.
-4. Runs `human_activity_reco.py` on the video.
-5. Runs `Reportgenearation.py`.
+```bash
+python human_activity_reco.py --input test1.mp4
+```
 
-## Changes from the 2022 version
+To specify files explicitly:
 
-- Added the missing `shutil` import.
-- Frame capture stops at the first failed read and checks that the video opened.
-- The random frame is chosen only from frames that were saved.
-- Helper scripts run as argument lists using `sys.executable`, so they use the same virtual environment.
+```bash
+python mainRun.py \
+  --model resnet-34_kinetics.onnx \
+  --classes action_recognition_kinetics.txt \
+  --input test1.mp4
+```
+
+Omit `--input` to use camera 0. Press **q** in the video window or **Ctrl+C** in the terminal to stop. Ctrl+Z suspends the process.
+
+Predictions are printed per clip and displayed over the frames. A final clip with fewer than 16 frames is skipped; a source with no complete clip returns an error. Model and label defaults resolve relative to the scripts; an explicit input path resolves relative to your current directory.
+
+## Legacy scripts
+
+`classify_image.py` is a separate TensorFlow/Keras ImageNet still-image classifier, with VGG16 as its default. It is not the video activity model and is no longer launched by `mainRun.py`.
+
+`Reportgenearation.py` trains a demonstration network on synthetic circles. Its metrics do not measure HAR performance. It is no longer launched automatically. Both legacy scripts retain their own dependencies and may need separate compatibility fixes.
 
 ## Troubleshooting
 
-- **`No module named 'cv2'`**: install `opencv-python` into the active environment.
-- **`No matching distribution found for tensorflow`**: the Python version is too new. Use Python 3.12.
-- **`Could not open video`**: check the file name and extension with `ls`.
-- **`no frame read from stream`**: `--input` must be a video file, not an image.
-- **`No module named 'PIL'`**: install `pillow`.
-- **`No module named 'seaborn'`**: install `seaborn`.
+- **Missing cv2 or numpy:** activate the environment and run `python -m pip install -r requirements.txt`.
+- **Model file not found:** place `resnet-34_kinetics.onnx` in the project folder or pass `--model /path/to/model.onnx`.
+- **Could not open video source:** check that the video is readable; for a camera, check macOS camera permission.
+- **No complete 16-frame clip:** use a readable video containing at least 16 frames.
+- **Model/label output mismatch:** use the labels supplied for that checkpoint, in their original order.
