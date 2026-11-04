@@ -1,85 +1,93 @@
-# USAGE
-# python human_activity_reco.py --model resnet-34_kinetics.onnx --classes action_recognition_kinetics.txt --input example_activities.mp4
-# python human_activity_reco.py --model resnet-34_kinetics.onnx --classes action_recognition_kinetics.txt
-
-# import the necessary packages
-import numpy as np
+"""Classify 16-frame video clips using OpenCV DNN and ResNet-34 ONNX."""
 import argparse
-import imutils
-import sys
-import cv2
+from pathlib import Path
 
-# construct the argument parser and parse the arguments
-ap = argparse.ArgumentParser()
-ap.add_argument("-m", "--model", required=True,
-	help="path to trained human activity recognition model")
-ap.add_argument("-c", "--classes", required=True,
-	help="path to class labels file")
-ap.add_argument("-i", "--input", type=str, default="",
-	help="optional path to video file")
-args = vars(ap.parse_args())
+ROOT = Path(__file__).resolve().parent
 
-# load the contents of the class labels file, then define the sample
-# duration (i.e., # of frames for classification) and sample size
-# (i.e., the spatial dimensions of the frame)
-CLASSES = open(args["classes"]).read().strip().split("\n")
-SAMPLE_DURATION = 16
-SAMPLE_SIZE = 112
 
-# load the human activity recognition model
-print("[INFO] loading human activity recognition model...")
-net = cv2.dnn.readNet(args["model"])
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("-m", "--model", default=str(ROOT / "resnet-34_kinetics.onnx"),
+                        help="ONNX model path (default: project ResNet-34 model)")
+    parser.add_argument("-c", "--classes", default=str(ROOT / "action_recognition_kinetics.txt"),
+                        help="class labels path (default: project Kinetics labels)")
+    parser.add_argument("-i", "--input", default="",
+                        help="video path; omit to use camera 0")
+    args = parser.parse_args()
+    for name in ("model", "classes"):
+        path = Path(getattr(args, name)).expanduser()
+        if not path.is_file():
+            parser.error(f"{name} file not found: {path}")
+        setattr(args, name, str(path))
+    if args.input:
+        source = Path(args.input).expanduser()
+        if not source.is_file():
+            parser.error(f"video file not found: {source}")
+        args.input = str(source)
 
-# grab a pointer to the input video stream
-print("[INFO] accessing video stream...")
-vs = cv2.VideoCapture(args["input"] if args["input"] else 0)
+    try:
+        import cv2
+        import numpy as np
+    except ImportError as exc:
+        parser.exit(1, f"Missing dependency: {exc}. Run: "
+                       "python -m pip install -r requirements.txt\n")
 
-# loop until we explicitly break from it
-while True:
-	# initialize the batch of frames that will be passed through the
-	# model
-	frames = []
+    classes = Path(args.classes).read_text(encoding="utf-8").splitlines()
+    classes = [label.strip() for label in classes if label.strip()]
+    if not classes:
+        parser.error("class labels file is empty")
 
-	# loop over the number of required sample frames
-	for i in range(0, SAMPLE_DURATION):
-		# read a frame from the video stream
-		(grabbed, frame) = vs.read()
+    vs = None
+    try:
+        print(f"[INFO] loading model: {args.model}", flush=True)
+        net = cv2.dnn.readNetFromONNX(args.model)
+        print("[INFO] accessing video stream...", flush=True)
+        vs = cv2.VideoCapture(args.input if args.input else 0)
+        if not vs.isOpened():
+            raise ValueError(f"Could not open video source: {args.input or 'camera 0'}")
+        clips = 0
+        while True:
+            frames = []
+            for _ in range(16):
+                grabbed, frame = vs.read()
+                if not grabbed:
+                    break
+                height, width = frame.shape[:2]
+                frames.append(cv2.resize(frame, (400, max(1, round(height * 400 / width)))))
+            if len(frames) < 16:
+                if clips == 0:
+                    raise ValueError("No complete 16-frame clip could be read from the source.")
+                print("[INFO] end of stream; incomplete final clip skipped")
+                return 0
+            blob = cv2.dnn.blobFromImages(
+                frames, 1.0, (112, 112), (114.7748, 107.7354, 99.4750),
+                swapRB=True, crop=True)
+            blob = np.expand_dims(np.transpose(blob, (1, 0, 2, 3)), axis=0)
+            net.setInput(blob)
+            outputs = net.forward().reshape(-1)
+            if outputs.size != len(classes):
+                raise ValueError(f"Model has {outputs.size} outputs, but labels file "
+                                 f"has {len(classes)} entries. Use matching model and labels.")
+            label = classes[int(np.argmax(outputs))]
+            clips += 1
+            print(f"[INFO] clip {clips}: {label}", flush=True)
+            for frame in frames:
+                cv2.rectangle(frame, (0, 0), (400, 40), (0, 0, 0), -1)
+                cv2.putText(frame, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
+                            0.8, (255, 255, 255), 2)
+                cv2.imshow("Activity Recognition", frame)
+                if cv2.waitKey(1) & 0xFF == ord("q"):
+                    return 0
+    except KeyboardInterrupt:
+        return 130
+    except (cv2.error, ValueError) as exc:
+        print(f"[ERROR] {exc}", flush=True)
+        return 1
+    finally:
+        if vs is not None:
+            vs.release()
+        cv2.destroyAllWindows()
 
-		# if the frame was not grabbed then we've reached the end of
-		# the video stream so exit the script
-		if not grabbed:
-			print("[INFO] no frame read from stream - exiting")
-			sys.exit(0)
 
-		# otherwise, the frame was read so resize it and add it to
-		# our frames list
-		frame = imutils.resize(frame, width=400)
-		frames.append(frame)
-
-	# now that our frames array is filled we can construct our blob
-	blob = cv2.dnn.blobFromImages(frames, 1.0,
-		(SAMPLE_SIZE, SAMPLE_SIZE), (114.7748, 107.7354, 99.4750),
-		swapRB=True, crop=True)
-	blob = np.transpose(blob, (1, 0, 2, 3))
-	blob = np.expand_dims(blob, axis=0)
-
-	# pass the blob through the network to obtain our human activity
-	# recognition predictions
-	net.setInput(blob)
-	outputs = net.forward()
-	label = CLASSES[np.argmax(outputs)]
-
-	# loop over our frames
-	for frame in frames:
-		# draw the predicted activity on the frame
-		cv2.rectangle(frame, (0, 0), (300, 40), (0, 0, 0), -1)
-		cv2.putText(frame, label, (10, 25), cv2.FONT_HERSHEY_SIMPLEX,
-			0.8, (255, 255, 255), 2)
-
-		# display the frame to our screen
-		cv2.imshow("Activity Recognition", frame)
-		key = cv2.waitKey(1) & 0xFF
-
-		# if the `q` key was pressed, break from the loop
-		if key == ord("q"):
-			break
+if __name__ == "__main__":
+    raise SystemExit(main())
